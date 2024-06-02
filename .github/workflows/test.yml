@@ -8,6 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: pull_request on master detection
+      - name: pull_request on master
         run: |
-          echo "Detect pull request on master!"
+          echo ${{ github.head_ref }}
