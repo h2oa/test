@@ -1,0 +1,15 @@
+name: ci-helm
+
+on:
+  pull_request:
+    paths:
+    - 'charts/**'
+    - '.github/workflows/ci-helm.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull_request
+        run: |
+          changed=$(ct list-changed --config=.ct.yml --target-branch ${{ github.event.repository.default_branch }})
