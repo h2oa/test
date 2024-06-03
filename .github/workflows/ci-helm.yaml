@@ -1,10 +1,7 @@
 name: ci-helm
 
 on:
-  pull_request:
-    paths:
-    - 'charts/**'
-    - '.github/workflows/ci-helm.yml'
+  pull_request
 
 jobs:
   build:
