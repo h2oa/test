@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: pull_request
         run: |
-          changed=$(ct list-changed --config=.ct.yml --target-branch ${{ github.event.repository.default_branch }})
+          echo ${{ github.event.repository.default_branch }}
